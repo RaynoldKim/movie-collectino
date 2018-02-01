@@ -23,6 +23,7 @@ paths:
     x-swagger-router-controller: movie
     get:
       description: get the movie list
+      operationId: getAll
       responses:
         "200":
           description: Success
@@ -35,6 +36,7 @@ paths:
             
     post:
       description: add a new movie to the list
+      operationId: save
       #movie info to be stored
       parameters:
         - name: title
@@ -58,6 +60,7 @@ paths:
     x-swagger-router-controller: movie
     get:
       description: get a movie
+      operationId: getOne
       #define the type of response for success "200" and Error
       parameters:
         - name: id
@@ -76,6 +79,7 @@ paths:
             
     put:
       description: update a movie
+      operationId: update
       #define the parameters
       parameters:
         - name: id
@@ -103,6 +107,7 @@ paths:
             
     delete:
       description: delete a movie
+      operationId: delMovie
       parameters:
         - name: id
           description: Movie id
