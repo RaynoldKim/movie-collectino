@@ -54,13 +54,13 @@ module.exports = function() {
          */
 
          update(id, movie) {
-             var movieindex = this.movieList.findIndex(element => {
+             var movieIndex = this.movieList.findIndex(element => {
                  return element.id === id;
              });
 
              if( movieIndex !== -1) {
-                 this.movieList[movieindex].title = movie.title;
-                 this.movieList[movieindex].year = movie.year;
+                 this.movieList[movieIndex].title = movie.title;
+                 this.movieList[movieIndex].year = movie.year;
                  return 1;
              } else {
                  return 0;
